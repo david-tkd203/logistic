@@ -1,0 +1,23 @@
+{
+  "appId": "cl.restologistics.app",
+  "appName": "RestoLogistics",
+  "webDir": "dist",
+  "server": {
+    "androidScheme": "http",
+    "cleartext": true,
+    "allowNavigation": [
+      "192.168.100.7:*",
+      "10.0.2.2:*",
+      "localhost:*"
+    ]
+  },
+  "android": {
+    "buildOptions": {}
+  },
+  "plugins": {
+    "SplashScreen": {
+      "launchShowDuration": 2000,
+      "backgroundColor": "#0f0f1a"
+    }
+  }
+}

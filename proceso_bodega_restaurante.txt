@@ -1,0 +1,51 @@
+PROCESO OPERATIVO INTEGRAL DE RECEPCIÓN Y GESTIÓN DE INSUMOS (RESTAURANTE)
+
+Este manual detalla la cadena de custodia de los insumos alimentarios, desde la recepción hasta su transformación, garantizando la inocuidad, la calidad y el control financiero estricto.
+
+1. RECEPCIÓN Y FILTRO DE CALIDAD
+Es el punto de control crítico para proteger la salud del cliente y la rentabilidad.
+   - Verificación Documental: Confrontación física contra Orden de Compra (OC) y Guía de Despacho. Prohibido recibir sin OC.
+   - Control de Temperatura: Uso obligatorio de termómetros calibrados.
+     - Refrigerados: 0°C a 5°C.
+     - Congelados: -18°C o menos.
+     - Rechazo inmediato si el producto está fuera de rango térmico.
+   - Inspección Organoléptica: Evaluación de color, olor, textura y estado de envases.
+   - Gestión de Rechazos: Cualquier anomalía debe registrarse en la guía y firmarse por el transportista, notificando al departamento de compras.
+
+2. ETIQUETADO Y TRAZABILIDAD (SISTEMA DE LOTEO)
+La trazabilidad es esencial para gestionar alertas alimentarias y controlar el vencimiento.
+   - Etiquetado Interno: Etiqueta adhesiva con:
+     - Fecha de recepción.
+     - Fecha de caducidad real (ajustada al producto).
+     - Nombre del proveedor y número de lote.
+   - Digitalización: Registro en el sistema ERP/POS para alta de inventario.
+
+3. ALMACENAMIENTO Y SEGURIDAD ALIMENTARIA (REGLA FIFO/PEPS)
+El almacenamiento eficiente previene el desperdicio y la contaminación cruzada.
+   - Rotación FIFO (First In, First Out): El producto con fecha de vencimiento más próxima debe consumirse primero.
+   - Sectorización de Cámaras de Frío (Orden vertical para evitar goteo):
+     1. Nivel Superior: Alimentos listos para el consumo (cocinados, postres).
+     2. Nivel Medio: Frutas y verduras lavadas/preparadas.
+     3. Nivel Inferior: Carnes crudas (res, cerdo, pollo, pescado, ordenado por temperatura de cocción).
+   - Zona de Secos: Estanterías elevadas (15-20 cm del suelo). Separación absoluta de productos químicos y de limpieza.
+   - Control de Plagas: Trasvasije a contenedores herméticos de policarbonato con tapa.
+
+4. GESTIÓN FINANCIERA Y CONTROL DE STOCK
+   - Gestión de Niveles: Definición clara de Stock Mínimo (punto de recompra) y Stock Máximo.
+   - Inventarios Cíclicos: Auditorías sorpresa y conteos aleatorios diarios de insumos de alto valor (proteínas, quesos, especias premium) para cuadrar con el sistema.
+   - Bitácora de Mermas: Registro obligatorio de todo producto desechado (por caducidad, mal estado o errores de cocina). El registro incluye la razón y la firma del responsable.
+
+5. SALIDA HACIA PRODUCCIÓN (REQUISICIÓN Y CONSUMO)
+   - Requisición Formal: Prohibido el acceso directo de cocina a bodega. Se requiere un vale o formulario de solicitud firmado por el Jefe de Cocina.
+   - Descarga en Tiempo Real: El sistema descuenta el producto al momento de la entrega.
+   - Merma Técnica: Evaluación de las pérdidas durante el pre-procesamiento (ej. limpieza de carnes, pelado de vegetales). Este cálculo es vital para definir el costo real de los platos.
+
+RESUMEN DE RESPONSABILIDADES Y FLUJO:
+
+| Etapa | Responsable | Acción Clave |
+| :--- | :--- | :--- |
+| Recepción | Bodeguero | Control de calidad y temperatura. |
+| Etiquetado | Bodeguero | Rotación y trazabilidad. |
+| Almacenaje | Bodeguero | Regla FIFO y orden vertical en frío. |
+| Control | Admin/Chef | Inventarios cíclicos y análisis de merma. |
+| Salida | Cocinero/Bodega | Requisición formal y registro de salida. |

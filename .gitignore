@@ -1,0 +1,49 @@
+# ── Python / Django ──────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*.pyo
+*.egg-info/
+dist/
+build/
+.eggs/
+*.egg
+env/
+.venv/
+venv/
+
+# ── Database ────────────────────────────────────────────────────
+*.db
+*.sqlite3
+*.sqlite3-wal
+*.sqlite3-shm
+
+# ── Static files (Django collectstatic) ─────────────────────────
+staticfiles/
+
+# ── Secrets / Environment ───────────────────────────────────────
+.env
+.env.*
+!.env.example
+credentials.json
+secrets/
+
+# ── Editor / IDE ────────────────────────────────────────────────
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# ── OS ──────────────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# ── Gentle AI / OpenCode ────────────────────────────────────────
+.atl/
+
+# ── Node.js (root level) ────────────────────────────────────────
+node_modules/
+
+# ── Gradle (root) ───────────────────────────────────────────────
+.gradle/

@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="es-CL">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/icons/icon-192.svg" />
+    <link rel="apple-touch-icon" href="/icons/icon-192.svg" />
+    <link rel="manifest" href="/manifest.json" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="theme-color" content="#d97706" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="RestoLog" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <title>RestoLogistics</title>
+    <style>
+      body { margin: 0; background: #0f0f1a; }
+      #root { min-height: 100vh; }
+      @media (display-mode: standalone) {
+        .sidebar { padding-top: env(safe-area-inset-top); }
+        .main-header { padding-top: env(safe-area-inset-top); }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+    <script>
+      try {
+        if ("serviceWorker" in navigator) {
+          navigator.serviceWorker.register("/service-worker.js").catch(function() {});
+        }
+      } catch(e) {
+        console.log("SW not available");
+      }
+    </script>
+  </body>
+</html>
