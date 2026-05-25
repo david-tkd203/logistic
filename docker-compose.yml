@@ -1,7 +1,6 @@
 services:
   db:
     image: postgres:16-alpine
-    container_name: restologistics-db
     volumes:
       - restologistics_pgdata:/var/lib/postgresql/data
     environment:
@@ -17,7 +16,6 @@ services:
 
   backend:
     build: .
-    container_name: restologistics-api
     ports:
       - "8000:8000"
     environment:
@@ -41,7 +39,6 @@ services:
 
   tunnel:
     image: cloudflare/cloudflared:latest
-    container_name: restologistics-tunnel
     command: tunnel --url http://backend:8000
     depends_on:
       - backend
