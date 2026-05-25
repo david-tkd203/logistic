@@ -54,6 +54,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
+    "whitenoise.middleware.WhiteNoiseMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
     "corsheaders.middleware.CorsMiddleware",
     "django.middleware.common.CommonMiddleware",
@@ -115,6 +116,16 @@ USE_TZ = True
 # ── Static files ─────────────────────────────────────────────────────────────
 STATIC_URL = "static/"
 STATIC_ROOT = BASE_DIR / "staticfiles"
+
+# Directorio del frontend build para collectstatic
+STATICFILES_DIRS = [BASE_DIR / "frontend" / "dist"]
+
+# Whitenoise: sirve archivos estáticos eficientemente en producción
+STORAGES = {
+    "staticfiles": {
+        "BACKEND": "whitenoise.storage.CompressedManifestStaticFilesStorage",
+    },
+}
 
 
 # ── CORS ─────────────────────────────────────────────────────────────────────
