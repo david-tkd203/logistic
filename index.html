@@ -2,9 +2,9 @@
 <html lang="es-CL">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/icons/icon-192.svg" />
-    <link rel="apple-touch-icon" href="/icons/icon-192.svg" />
-    <link rel="manifest" href="/manifest.json" />
+    <link rel="icon" type="image/svg+xml" href="/static/icons/icon-192.svg" />
+    <link rel="apple-touch-icon" href="/static/icons/icon-192.svg" />
+    <link rel="manifest" href="/static/manifest.json" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <meta name="theme-color" content="#d97706" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -25,9 +25,10 @@
     <div id="root"></div>
     <script type="module" src="/frontend/src/main.jsx"></script>
     <script>
+      // Service worker — en prod se sirve desde /static/
       try {
         if ("serviceWorker" in navigator) {
-          navigator.serviceWorker.register("/frontend/public/service-worker.js").catch(function() {});
+          navigator.serviceWorker.register("/static/service-worker.js", { scope: "/" }).catch(function() {});
         }
       } catch(e) {
         console.log("SW not available");

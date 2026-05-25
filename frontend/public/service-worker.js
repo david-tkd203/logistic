@@ -1,5 +1,5 @@
 const CACHE = "restolog-v1";
-const ASSETS = ["/", "/index.html", "/manifest.json", "/icons/icon-192.svg", "/icons/icon-512.svg"];
+const ASSETS = ["/", "/static/index.html", "/static/manifest.json", "/static/icons/icon-192.svg", "/static/icons/icon-512.svg"];
 
 // Instalar: cachear app shell
 self.addEventListener("install", (event) => {
@@ -52,8 +52,8 @@ self.addEventListener("push", (event) => {
   const title = data.titulo || "RestoLogistics";
   self.registration.showNotification(title, {
     body: data.mensaje || "",
-    icon: "/icons/icon-192.svg",
-    badge: "/icons/icon-192.svg",
+    icon: "/static/icons/icon-192.svg",
+    badge: "/static/icons/icon-192.svg",
     vibrate: [200, 100, 200],
     data: { url: data.url || "/" },
   });
