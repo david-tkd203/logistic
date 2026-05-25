@@ -1,13 +1,39 @@
+# ── Version control ──────────────────────────────────────────────
 .git
 .gitignore
+
+# ── Secrets / Environment ───────────────────────────────────────
 .env
-__pycache__
+.env.*
+
+# ── Python ──────────────────────────────────────────────────────
+__pycache__/
 *.pyc
 *.pyo
-.atl
-frontend/node_modules
-frontend/dist
-frontend/android
-frontend/capacitor.config.json
+
+# ── Database ─────────────────────────────────────────────────────
+*.db
+*.sqlite3*
+
+# ── Dependencies ─────────────────────────────────────────────────
+node_modules/
+
+# ── Build output ─────────────────────────────────────────────────
+dist/
+frontend/dist/
+
+# ── Native Android (not needed in any Docker image) ──────────────
+frontend/android/
+
+# ── Editor / IDE ─────────────────────────────────────────────────
+.vscode/
+.idea/
+
+# ── Project files ────────────────────────────────────────────────
 Planificacion_SDLC_App_Logistica.xlsx
 proceso_bodega_restaurante.txt
+.atl/
+
+# ── Logs ─────────────────────────────────────────────────────────
+*.log
+logs/

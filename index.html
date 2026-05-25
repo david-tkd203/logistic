@@ -23,11 +23,11 @@
   </head>
   <body>
     <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
+    <script type="module" src="/frontend/src/main.jsx"></script>
     <script>
       try {
         if ("serviceWorker" in navigator) {
-          navigator.serviceWorker.register("/service-worker.js").catch(function() {});
+          navigator.serviceWorker.register("/frontend/public/service-worker.js").catch(function() {});
         }
       } catch(e) {
         console.log("SW not available");

@@ -10,15 +10,13 @@ build/
 env/
 .venv/
 venv/
+staticfiles/
 
-# ── Database ────────────────────────────────────────────────────
+# ── Database ─────────────────────────────────────────────────────
 *.db
 *.sqlite3
 *.sqlite3-wal
 *.sqlite3-shm
-
-# ── Static files (Django collectstatic) ─────────────────────────
-staticfiles/
 
 # ── Secrets / Environment ───────────────────────────────────────
 .env
@@ -39,11 +37,23 @@ secrets/
 Thumbs.db
 Desktop.ini
 
+# ── Dependencies / Build output ─────────────────────────────────
+node_modules/
+dist/
+frontend/dist/
+
+# ── Native Android ──────────────────────────────────────────────
+frontend/android/.gradle/
+frontend/android/local.properties
+frontend/android/build/
+frontend/android/.idea/
+
 # ── Gentle AI / OpenCode ────────────────────────────────────────
 .atl/
 
-# ── Node.js (root level) ────────────────────────────────────────
-node_modules/
+# ── Project files ───────────────────────────────────────────────
+Planificacion_SDLC_App_Logistica.xlsx
 
-# ── Gradle (root) ───────────────────────────────────────────────
-.gradle/
+# ── Logs ────────────────────────────────────────────────────────
+*.log
+logs/

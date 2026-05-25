@@ -5,10 +5,11 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   plugins: [react()],
   base: '/',
+  publicDir: 'frontend/public',
   build: {
     target: 'es2020',
     cssCodeSplit: false,
-    outDir: 'dist',
+    outDir: 'frontend/dist',
   },
   esbuild: {
     legalComments: 'none',

@@ -1,7 +1,7 @@
 {
   "appId": "cl.restologistics.app",
   "appName": "RestoLogistics",
-  "webDir": "dist",
+  "webDir": "frontend/dist",
   "server": {
     "androidScheme": "http",
     "cleartext": true,
@@ -12,6 +12,7 @@
     ]
   },
   "android": {
+    "path": "frontend/android",
     "buildOptions": {}
   },
   "plugins": {
