@@ -130,14 +130,15 @@ STORAGES = {
 
 
 # ── CORS ─────────────────────────────────────────────────────────────────────
-if DEBUG:
+# En DEBUG o si CORS_ALLOW_ALL_ORIGINS=True se permite cualquier origen
+if DEBUG or os.getenv("CORS_ALLOW_ALL_ORIGINS", "False").lower() in ("true", "1", "yes"):
     CORS_ALLOW_ALL_ORIGINS = True
 else:
-    CORS_ALLOW_ALL_ORIGINS = False
+    CORS_ALLOW_ALL_ORIGINS = os.getenv("CORS_ALLOW_ALL_ORIGINS", "False").lower() in ("true", "1", "yes")
     CORS_ALLOWED_ORIGINS = os.getenv(
         "CORS_ALLOWED_ORIGINS",
-        "http://localhost:80,http://localhost:5173,http://192.168.100.7:80",
-    ).split(",")
+        "",
+    ).split(",") if os.getenv("CORS_ALLOWED_ORIGINS") else [f"http://localhost:8000"]
 
 
 # ── drf-spectacular (Swagger/OpenAPI) ────────────────────────────────────────
