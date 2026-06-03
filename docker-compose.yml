@@ -28,6 +28,9 @@ services:
       retries: 3
       start_period: 40s
     restart: unless-stopped
+    networks:
+      - default
+      - dokploy
 
   tunnel:
     image: cloudflare/cloudflared:latest
@@ -35,3 +38,10 @@ services:
     depends_on:
       - backend
     restart: unless-stopped
+    networks:
+      - default
+
+networks:
+  dokploy:
+    external: true
+    name: dokploy-network

@@ -17,6 +17,8 @@ services:
       timeout: 3s
       retries: 10
     restart: unless-stopped
+    networks:
+      - default
 
   backend:
     depends_on:
@@ -24,6 +26,16 @@ services:
         condition: service_healthy
     environment:
       DB_HOST: db
+    networks:
+      - default
+
+  tunnel:
+    networks:
+      - default
 
 volumes:
   restologistics_pgdata:
+
+networks:
+  dokploy:
+    driver: bridge
