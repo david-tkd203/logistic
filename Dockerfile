@@ -27,7 +27,7 @@ WORKDIR /app
 
 # Dependencias del sistema
 RUN apt-get update && apt-get install -y --no-install-recommends \
-    libpq-dev gcc \
+    libpq-dev gcc curl \
     && rm -rf /var/lib/apt/lists/*
 
 # Dependencias Python
@@ -41,6 +41,9 @@ COPY . .
 COPY --from=frontend-build /app/frontend/dist /app/frontend/dist
 
 EXPOSE 8000
+
+HEALTHCHECK --interval=15s --timeout=5s --start-period=40s --retries=3 \
+    CMD curl -f http://localhost:8000/api/ || exit 1
 
 # Seed + migraciones + arranque
 CMD python manage.py collectstatic --noinput && \
