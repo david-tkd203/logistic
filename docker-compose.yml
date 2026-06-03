@@ -1,6 +1,5 @@
 # ────────────────────────────────────────────────────────────
 # Docker Compose para PRODUCCIÓN (Dokploy).
-# Dokploy solo usa este archivo. No incluye db local ni tunnel.
 # ────────────────────────────────────────────────────────────
 services:
   backend:
@@ -13,6 +12,7 @@ services:
       DJANGO_DEBUG: ${DJANGO_DEBUG}
       DJANGO_ALLOWED_HOSTS: ${DJANGO_ALLOWED_HOSTS}
       DJANGO_CSRF_TRUSTED_ORIGINS: ${DJANGO_CSRF_TRUSTED_ORIGINS}
+      DJANGO_SECURE_SSL_REDIRECT: ${DJANGO_SECURE_SSL_REDIRECT}
       PYTHONUNBUFFERED: "1"
       DB_ENGINE: ${DB_ENGINE}
       DB_NAME: ${DB_NAME}
@@ -27,4 +27,11 @@ services:
       timeout: 5s
       retries: 3
       start_period: 40s
+    restart: unless-stopped
+
+  tunnel:
+    image: cloudflare/cloudflared:latest
+    command: tunnel --url http://backend:8000
+    depends_on:
+      - backend
     restart: unless-stopped

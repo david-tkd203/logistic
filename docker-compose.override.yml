@@ -25,12 +25,5 @@ services:
     environment:
       DB_HOST: db
 
-  tunnel:
-    image: cloudflare/cloudflared:latest
-    command: tunnel --url http://backend:8000
-    depends_on:
-      - backend
-    restart: unless-stopped
-
 volumes:
   restologistics_pgdata:
